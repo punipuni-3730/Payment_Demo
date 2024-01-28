@@ -57,8 +57,7 @@ html{
     vertical-align: middle;
 }
 .select img{
-    height: 100px;
-    aspect-ratio: 1;
+    width: 100px;
     margin-left: 10px;
 }
 .select a{
