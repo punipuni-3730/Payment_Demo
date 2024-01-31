@@ -2,7 +2,7 @@
 	"short_name": "決済体験",
 	"name": "非接触決済体験アプリ",
 	"display": "fullscreen",
-	"start_url": "/Payment_Demo/index.html",
+	"start_url": "/payment_demo/index.html",
 	"theme_color": "#3E50B4",
 	"icons": [
 		{

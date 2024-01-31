@@ -8,7 +8,7 @@ body {
     color: black;
     margin: 0;
     text-indent: 0;
-    height: 150%;
+    height: 170%;
 }
 html{
     height: 100%;
@@ -54,7 +54,6 @@ html{
     position:relative;
     display: flex;
     font-size: 40px;
-    vertical-align: middle;
 }
 .select img{
     width: 100px;
