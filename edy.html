@@ -25,11 +25,20 @@
     <audio id="credit">
         <source src="/Payment_Demo/sound/edy.mp3" type="audio/mp3">
     </audio>
+    <audio id="credit_error">
+        <source src="/Payment_Demo/sound/Edy Error.wav" type="audio/wav">
+    </audio>
     <script>
         function play() {
+        var rnd = Math.floor( Math.random() * 100);
+        if (rnd < 70){
         document.getElementById("credit").play();
         document.getElementById("pay_text").innerHTML = "";
-        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:Edy/980円<br>完了</p>`)
+        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:Edy/980円<br>完了</p>`)}
+        else {
+        document.getElementById("credit_error").play();
+        document.getElementById("pay_text").innerHTML = "";
+        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:Edy/980円<br>エラー</p>`) }
         }
     </script>
     <style>
