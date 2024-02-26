@@ -25,11 +25,22 @@
     <audio id="credit">
         <source src="/Payment_Demo/sound/transportationic.mp3" type="audio/mp3">
     </audio>
+    <audio id="credit_error">
+        <source src="/Payment_Demo/sound/Error.wav" type="audio/wav">
+    </audio>
     <script>
         function play() {
-        document.getElementById("credit").play();
-        document.getElementById("pay_text").innerHTML = "";
-        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:交通系IC/2170円<br>完了</p>`)
+            var rnd = Math.floor(Math.random() * 100);
+            if (rnd < 70) {
+                document.getElementById("credit").play();
+                document.getElementById("pay_text").innerHTML = "";
+                document.getElementById("pay_text").insertAdjacentHTML('beforeend', `<p>決済:交通系IC/2170円<br>完了</p>`)
+            }
+            else {
+                document.getElementById("credit_error").play();
+                document.getElementById("pay_text").innerHTML = "";
+                document.getElementById("pay_text").insertAdjacentHTML('beforeend', `<p>決済:交通系IC/2170円<br>エラー</p>`)
+            }
         }
     </script>
     <style>

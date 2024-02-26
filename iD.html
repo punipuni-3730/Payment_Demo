@@ -28,17 +28,24 @@
     <audio id="credit_error">
         <source src="/Payment_Demo/sound/iD Error.wav" type="audio/wav">
     </audio>
+    <audio id="credit_retry">
+        <source src="/Payment_Demo/sound/Again 1.wav" type="audio/wav">
+    </audio>
     <script>
         function play() {
         var rnd = Math.floor( Math.random() * 100);
-        if (rnd < 70){
-        document.getElementById("credit").play();
-        document.getElementById("pay_text").innerHTML = "";
-        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:iD/680円<br>完了</p>`)}
-        else {
+        if (rnd < 25){
         document.getElementById("credit_error").play();
         document.getElementById("pay_text").innerHTML = "";
-        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:iD/680円<br>エラー</p>`) }
+        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:iD/680円<br>エラー</p>`)}
+        else if (rnd < 35) {
+        document.getElementById("credit_retry").play();
+        document.getElementById("pay_text").innerHTML = "";
+        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:iD/680円<br>もう一度タッチしてください</p>`) }
+        else {
+        document.getElementById("credit").play();
+        document.getElementById("pay_text").innerHTML = "";
+        document.getElementById("pay_text").insertAdjacentHTML('beforeend',`<p>決済:iD/680円<br>完了</p>`) }
         }
     </script>
     <style>
